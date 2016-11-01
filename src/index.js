@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+//Test components
 
-import App from './components/app';
-import reducers from './reducers';
+var TestApp = React.createClass( {
+  render: function() {
+    return (
+      <div>Yo</div>
+    )
+  }
+});
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+
+ReactDOM.render(<TestApp />, document.getElementById('app'));
